@@ -1,0 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.penix {
+    @apply text-2xl text-green-200 bg-gradient-to-br from-blue-500 to-black h-2/5 text-center p-20
+}
