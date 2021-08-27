@@ -3,8 +3,32 @@
 {% block body %}
     {{ parent() }}
     <div class="container mx-auto max-w-5xl">
-        <h1 class="penix">
+        <h2 class="text-mauve">This is what <strong>I got</strong></h2>
+        <div class="grid grid-flow-col -mx-3 justify-content">
+            {{ include('components/card.html.twig', {
+                card_image: '/media/images/wqhd_sunrise.jpg',
+                card_title: 'Webdesign',
+                card_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur corporis
+                fugit ipsum minus, sapiente? Consectetur corporis, cum dolor eveniet minus nam nisi, odio quis ratione
+                saepe sed sunt tempora!'
+            })  }}
+            {{ include('components/card.html.twig', {
+                card_image: '/media/images/IMG_1679_hd.jpg',
+                card_title: 'Music',
+                card_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur corporis
+                fugit ipsum minus, sapiente? Consectetur corporis, cum dolor eveniet minus nam nisi, odio quis ratione
+                saepe sed sunt tempora!'
+            })  }}
+            {{ include('components/card.html.twig', {
+                card_image: '/media/images/IMG_halme_hd.jpg',
+                card_title: 'Fotos',
+                card_text: 'Like everyone with a reasonable phone camera in their pocket, I sometimes snap some images. Recently
+                    I even got a Canon M50 with some lenses!'
+            })  }}
+        </div>
+        <div class="text-2xl rounded-2xl text-white bg-capri h-2/5 text-center p-20 mt-5">
+            Your lucky number is: <br>
             {{ number }}
-        </h1>
+        </div>
     </div>
 {% endblock %}

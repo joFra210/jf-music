@@ -1,9 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
+
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
 
+html, body {
+    font-family: 'Urbanist', sans-serif;
+    min-height: 100vh;
+    @apply bg-dark text-white;
+}
+
 .penix {
-    @apply text-2xl text-green-200 bg-gradient-to-br from-blue-500 to-black h-2/5 text-center p-20
+    @apply text-2xl rounded-2xl text-dark bg-gradient-to-br from-mint to-mauve h-2/5 text-center p-20
+}
+
+
+h1, h2, h3, h4, h5 {
+    @apply font-bold;
+}
+h1 {
+    @apply text-8xl text-mint pb-24 pt-48
+}
+h2 {
+    @apply text-4xl text-mauve pb-12 pt-12
+}
+
+.bg-center-image {
+    @apply bg-no-repeat bg-cover bg-center relative;
+}
+
+.bg-darkened-image:after {
+    content: "";
+    @apply bg-gradient-to-t from-dark opacity-40 absolute left-0 bottom-0 z-0 w-full h-1/2;
+}
+
+.bg-mint-to-mauve {
+    @apply bg-gradient-to-br from-mint to-mauve;
 }

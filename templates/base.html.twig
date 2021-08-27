@@ -14,9 +14,13 @@
     </head>
     <body>
         {% block body %}
-            <div class="container mx-auto">
-                <h1>Crazy website</h1>
-            </div>
+            {% block header %}
+                <div class="bg-center-image bg-darkened-image" style="background-image: url('{{ asset('media/images/IMG_sunrise_hd.jpg') }}')">
+                    <div class="container max-w-5xl mx-auto">
+                        <h1 class="relative z-10">{% block h1 %}My new Website{% endblock %}</h1>
+                    </div>
+                </div>
+            {% endblock %}
         {% endblock %}
     </body>
 </html>
